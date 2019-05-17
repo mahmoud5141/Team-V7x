@@ -8,9 +8,6 @@ print(""" \033[1;36m
                              Mahmoud and Team-V7x
 ----------------------------------------------------------------------------\033[1;m""")
 def main():
-
-  	print("please input Number")
-        print("   VERSION < 1 >    2019      ")
 	print("""
 🤩--1___*_____Matrix
 🤬--2___*_____Froms GOOD

